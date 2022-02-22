@@ -1,0 +1,713 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------- idioma --------------------------*/
+
+.fixed-2 {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 35px;
+  z-index: 1002;
+  height: auto;
+  background-color: #e4e4e4;
+}
+
+.idiomas{
+  float: right;
+  height: 35px;
+  margin-right: 20px;
+}
+
+.langbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  font-family:'Cairo', sans-serif;
+  margin-top: 2px;
+  background-color: transparent;
+  margin-right: 15px;
+}
+
+.langbtn a{
+  text-decoration: none;
+  outline: none;
+  color: #595757;
+  font-weight: bold;
+}
+
+#arrow {
+  margin-bottom: 3px;
+  margin-left: 7px;
+}
+
+.dropdown-lang {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2000;
+}
+
+.dropdown-lang a {
+  color: black;
+  padding: 8px 14px;
+  text-decoration: none;
+  display: block;
+  font-family:'Cairo', sans-serif;
+  background-color: white;
+}
+
+.dropdown-lang a:hover {background-color: #efefef;}
+
+.idiomas:hover .dropdown-lang {display: block;}
+
+.contact-us, .contact-us2{
+  margin-right: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.buttons{
+  float: right;
+  margin-top: 2px;
+}
+
+.contact-us a, .contact-us2 a{
+  text-decoration: none;
+  outline: none;
+  color: #595757;
+  font-size: 16px;
+  font-family:'Cairo', sans-serif;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-us a:hover{
+  color: #dc1b63;
+}
+
+.contact-us2 a:hover{
+  color: #c1ca36;
+}
+
+/*------------------------------------- navbar --------------------------*/
+
+.fixed {
+  position: fixed;
+  top: 35px;
+  width: 100%;
+  z-index: 1000;
+  height: auto;
+}
+
+.navbar {
+  display: inline-flex;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+  justify-content: center;
+
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu{
+  padding: 16px 16px 12px 16px;
+  width: 190px;
+  font-family:'Cairo', sans-serif;
+  font-weight: bold;
+}
+
+i {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 4px 5px;
+  }
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.dropdown {
+  width: 160px;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.logo-menu img{
+  width: 125px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  position: absolute;
+  background-color: rgba(255,  255, 255, 0.91);
+  width: 100%;
+  height: auto;
+  left: 0;
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.navbar:hover .dropdown-content {
+  display: block;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 190px;
+  padding: 10px;
+  /*background-color: #ccc;*/
+}
+
+.column a {
+  font-size: 15px;
+  float: none;
+  color: black;
+  padding: 10px 0px 10px 23px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.empty{
+  width: 170px;
+}
+
+.one a:hover {
+  background-color: rgba(245, 200, 81, 0.4);
+}
+
+.one:hover {
+  border-top: 4px solid rgba(245, 200, 81, 1);
+}
+
+.two a:hover {
+  background-color: rgba(193, 202, 54, 0.4);
+}
+
+.two:hover {
+  border-top: 4px solid rgba(193, 202, 54, 1);
+}
+
+.three a:hover {
+  background-color: rgba(50, 84, 238, 0.3);
+}
+
+.three:hover {
+  border-top: 4px solid rgba(50, 84, 238, 1);
+}
+
+.four a:hover {
+  background-color: rgba(237, 137, 46, 0.4);
+}
+
+.four:hover {
+  border-top: 4px solid rgba(237, 137, 46, 1);
+}
+
+/* Clear floats after the columns */
+.conteudo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mobile-nav{
+  display: none;
+}
+
+.icon, .logo-sidemenu {
+  display: none;
+}
+
+/*--------------------------------------------------*/
+
+.conteudo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "fixed-2 fixed-2"
+  "fixed fixed"
+  "coluna1 coluna2";
+  grid-template-rows: auto;
+  max-height: 100%;
+}
+
+.coluna1{
+  grid-column: 1 / 2;
+  align-self: center;
+  height: 100vh;
+  background-image: url(login2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.coluna2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  height: 100vh;
+  background-image: url(BG2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+}
+
+.text-banner {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /*background-color: rgba(0, 0, 0, 0.25);*/
+}
+
+.text-banner p{
+  font-size: 62px;
+  color: #fcbf1c;
+  font-family: "Arial Black",Sans-Serif;
+  text-shadow: 2px 2px rgba(0,0,0,0.50);
+  /*line-height: 55px;*/
+  z-index: 1000;
+  padding: 20px;
+}
+
+.login {
+  width: 60%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.suporte {
+  width: 75%;
+  margin-top: 140px;
+}
+
+.suporte label{
+  display: block;
+}
+
+.menu-footer {
+  position: fixed;
+  bottom: 0px;
+}
+
+.menu-footer p{
+  text-align: center;
+}
+
+.esstech p{
+  font-family: 'Russo One', sans-serif;
+  font-size: 16px;
+  color: #595757;
+}
+
+.st{
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.st h4{
+  font-size: 16px;
+  font-family: 'Cairo', sans-serif;
+}
+
+.st img{
+  width: 35px;
+  margin-right: 10px;
+}
+
+.st2 p, .st2 a{
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px;
+  margin-left: 45px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+/*----------------------------------------------------------*/
+
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email], .suporte select, .suporte textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 0px 0 12px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.signin[type=text], .serviço select  {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 10px 22px 0px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.tipo2 {
+  margin-left: 15px;
+}
+
+/* Set a style for all buttons */
+.cancelbtn, .signupbtn, .cadast, .loginbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 20px;
+  margin: 3px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 20px;
+  margin: 3px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-family: 'Cairo', sans-serif;
+}
+
+.suporte textarea{
+  height: 80px;
+}
+
+button:hover, input[type=submit]:hover {
+  opacity: 1;
+}
+
+.cadast{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: grey;
+  margin-bottom: 0px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 8px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 98%;
+  margin-left: 3px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1005; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  padding: 16px;
+  border-radius: 20px;
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.fields{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "empresa serviço"
+  "cnpj nome"
+  "dept email"
+  "cel remember"
+  "cancelbtn signupbtn";
+  grid-template-rows: auto;
+}
+
+.remember{
+  margin: 40px 0px 0px 20px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  /*display: table;*/
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 40px;
+  color: #ed882e;
+  margin: 30px 0px;
+}
+
+h3{
+  font-family: 'Cairo', sans-serif;
+  font-size: 25px;
+  color: rgba(248, 189, 0, 1);
+  margin-bottom: 10px;
+}
+
+label{
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+button, .signupbtn {
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px;
+}
+
+p {
+  font-family: 'Cairo', sans-serif;
+  font-size: 18px;
+}
+
+.cadastro {
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.trocar-senha, .esqueci-senha{
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px;
+  text-decoration-color: none;
+}
+
+.esqueci-senha {
+  float: right;
+}
+
+@media screen and (max-width: 1320px) and (min-width: 1025px) {
+  .login{
+    width: 80%;
+  }
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/*---------------------------------mobile nav-------------------*/
+
+@media screen and (max-width: 1024px) {
+nav{
+    display: none;
+  }
+
+  .mobile-nav{
+    display: block;
+    margin-top: 35px;
+  }
+
+  .btn-sidenav{
+    padding: 5px, 0px, 7px, 5px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+
+  }
+
+  .logo-sidemenu{
+    display: block;
+  }
+
+  .logo-sidemenu img{
+    width: 125px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  }
+
+  .icon {
+    float: left;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    padding: 10px 5px 0px 15px;
+    font-weight: bold;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2015;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255, 0.92);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: left;
+  }
+
+  .sidenav a {
+    font-family: 'Cairo', sans-serif;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .dropdown-btn {
+    padding: 15px 8px 15px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: rgba(196,196,196, 0.3); ;
+    padding-left: 8px;
+  }
+
+  .fa-caret-down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .banner{
+    display: none;
+  }
+
+  .coluna2{
+    grid-column: 1 / 3;
+    width: 100%;
+  }
+
+  .st2 p, .st2 a{
+    margin-left: 0;
+  }
+
+  .fields{
+    display: block;
+  }
+
+  .tipo2 {
+    margin-left: 0px;
+  }
+
+  .login{
+    width: 80%;
+  }
+}
